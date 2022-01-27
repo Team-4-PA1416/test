@@ -12,6 +12,9 @@
   --accent: darkred;
 }
 
+h1 {
+  color: var(--text-secondary); 
+}
 
 body {
   background-color: var(--background);
