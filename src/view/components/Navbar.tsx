@@ -5,12 +5,12 @@ import {
     NavMenu,
     NavBtn,
     NavBtnLink,
-} from '../../css/NavbarElements';
+} from '../../css/NavbarElements.tsx';
 
 const Navbar = () => {
     return (
         <>
-            <Nav>
+            <Nav className="navBar">
                 <NavMenu>
                     <NavLink to='/'>
                         Home
