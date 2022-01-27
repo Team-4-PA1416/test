@@ -1,5 +1,6 @@
 :root {
   --background: white;
+  --navbar-background: #63D471;
   --text-primary: black;
   --text-secondary: royalblue;
   --accent: purple;
@@ -7,13 +8,14 @@
 
 [data-theme='dark'] {
   --background: black;
+  --navbar-background: cornflowerblue;
   --text-primary: white;
   --text-secondary: grey;
   --accent: darkred;
 }
 
 h1 {
-  color: var(--text-secondary); 
+  color: var(--text-secondary);
 }
 
 body {
@@ -93,7 +95,7 @@ input:checked + .slider {
 }
 
 .navBar {
-  background-color: var(--background-color);
+  background-color: var(--navbar-background);
   color: var(--font-color);
 }
 
