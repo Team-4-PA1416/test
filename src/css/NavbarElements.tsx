@@ -12,7 +12,6 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled(Link)`
-    color: #808080;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -26,6 +25,7 @@ export const NavLink = styled(Link)`
 
 export const NavMenu = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
     margin-right: -24px;
     /* Second Nav */
@@ -41,7 +41,9 @@ export const NavMenu = styled.div`
 export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    float: right;
+    width: 100%;
+    justify-content: flex-end;
     /* Third Nav */
     /* justify-content: flex-end;
     width: 100vw; */

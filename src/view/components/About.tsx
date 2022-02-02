@@ -9,7 +9,7 @@ const About = () => {
                 alignItems: 'Right'
             }}
         >
-            <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
+            <h1>About page.</h1>
         </div>
     );
 };

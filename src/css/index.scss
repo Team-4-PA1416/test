@@ -1,9 +1,13 @@
+@import 'bootstrap/scss/bootstrap';
+
 :root {
   --background: white;
   --navbar-background: #63D471;
   --text-primary: black;
   --text-secondary: royalblue;
   --accent: purple;
+  --link-color: gray;
+  --link-color-active: black;
 }
 
 [data-theme='dark'] {
@@ -12,6 +16,8 @@
   --text-primary: white;
   --text-secondary: grey;
   --accent: darkred;
+  --link-color: yellow;
+  --link-color-active: orange;
 }
 
 h1 {
@@ -94,15 +100,24 @@ input:checked + .slider {
   border-radius: 50%;
 }
 
-.navBar {
-  background-color: var(--navbar-background);
+#navBar {
+  background-color: var(--navbar-background) !important;
   color: var(--font-color);
 }
 
-.navBar .a {
+#navBar .a {
   color: var(--link-color);
 }
 
+#navBar .active {
+  color: var(--link-color-active);
+}
+
 a {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: none;
   color: var(--link-color);
 }

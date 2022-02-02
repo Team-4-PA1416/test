@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/index.css';
+import './css/index.scss';
 import App from './view/App.tsx';
 import { render } from "react-dom";
 
