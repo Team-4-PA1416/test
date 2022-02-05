@@ -8,7 +8,7 @@ const defaultDark =
     storedTheme === "dark" || (storedTheme === null && prefersDark);
 
 const defaultSize =
-    storedSize === "one" || (storedSize === null);
+    storedSize === "two" || (storedSize === null);
 
 
 const Styling = {
@@ -30,7 +30,7 @@ const Styling = {
     },
     setDefault: function() {
         if (defaultSize) {
-            Styling.setSizeOne();
+            Styling.setSizeTwo();
         }
         if (defaultDark) {
             Styling.setDark();
