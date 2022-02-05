@@ -6,47 +6,7 @@ import {
 } from '../../css/NavbarElements.tsx';
 import Button from 'react-bootstrap/button';
 import Navbar from 'react-bootstrap/navbar';
-
-const setDark = () => {
-    localStorage.setItem("theme", "dark");
-    document.documentElement.setAttribute("data-theme", "dark");
-};
-
-const setLight = () => {
-    localStorage.setItem("theme", "light");
-    document.documentElement.setAttribute("data-theme", "light");
-};
-
-const setSizeOne = () => {
-    localStorage.setItem("size", "one");
-    document.documentElement.setAttribute("size-theme", "size-one");
-};
-
-const setSizeTwo = () => {
-    localStorage.setItem("size", "two");
-    document.documentElement.setAttribute("size-theme", "size-two");
-};
-
-const storedTheme = localStorage.getItem("theme");
-const storedSize = localStorage.getItem("size");
-
-const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-const defaultDark =
-    storedTheme === "dark" || (storedTheme === null && prefersDark);
-
-const defaultSize =
-    storedSize === "one" || (storedSize === null);
-
-if (defaultSize) {
-    setSizeOne();
-}
-
-if (defaultDark) {
-    setDark();
-}
+import Styling from '../../javascript/models.js';
 
 const Navbarz = () => {
     return (
@@ -66,13 +26,13 @@ const Navbarz = () => {
                         </NavLink>
                         <NavBtn className="pull-right">
                             <Button type="button"
-                                variant="light" onClick={setSizeOne}>c</Button>
+                                variant="light" onClick={Styling.setSizeOne}>c</Button>
                             <Button type="button"
-                                variant="light" onClick={setSizeTwo}>C</Button>
+                                variant="light" onClick={Styling.setSizeTwo}>C</Button>
                             <Button type="button"
-                                variant="light" onClick={setLight}>☀️</Button>
+                                variant="light" onClick={Styling.setLight}>☀️</Button>
                             <Button type="button"
-                                variant="light" onClick={setDark}>🌒</Button>
+                                variant="light" onClick={Styling.setDark}>🌒</Button>
                         </NavBtn>
                     </NavMenu>
                 </Navbar.Collapse>
