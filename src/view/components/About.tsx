@@ -1,16 +1,9 @@
 import React from 'react';
+import { DivHolder } from '../../css/NavbarElements.tsx';
 
 const About = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Right',
-                flexDirection: 'column',
-                textAlign: 'center',
-            }}
-        >
+        <DivHolder>
             <h1>About page.</h1>
             <h2>Lorem Ipsum.</h2>
             <h3>
@@ -32,7 +25,7 @@ const About = () => {
                 Pellentesque est lacus, mattis vel tincidunt finibus,
                 tempus eu magna.
             </p>
-        </div>
+        </DivHolder>
     );
 };
 

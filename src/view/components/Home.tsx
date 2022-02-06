@@ -1,16 +1,11 @@
 import React from 'react';
+import { DivHolder } from '../../css/NavbarElements.tsx';
 
 const Home = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Right'
-            }}
-        >
+        <DivHolder>
             <h1>Welcome</h1>
-        </div>
+        </DivHolder>
     );
 };
 

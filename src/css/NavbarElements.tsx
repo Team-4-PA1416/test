@@ -23,6 +23,15 @@ export const NavLink = styled(Link)`
     }
 `;
 
+// !NOT PART OF NAVBAR!
+export const DivHolder = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+    text-align: center;
+`;
+
 export const NavMenu = styled.div`
     display: flex;
     width: 100%;
