@@ -15,13 +15,13 @@ const Navbarz = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <NavMenu>
-                        <NavLink to='/'>
+                        <NavLink to='/' aria-label="Home link">
                             Home
                         </NavLink>
-                        <NavLink to='/about'>
+                        <NavLink to='/about' aria-label="About link">
                             About
                         </NavLink>
-                        <NavLink to='/contact'>
+                        <NavLink to='/contact' aria-label="Contact link">
                             Contact
                         </NavLink>
                         <NavBtn className="pull-right">

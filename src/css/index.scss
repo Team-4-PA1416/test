@@ -6,19 +6,19 @@
   --text-primary: black;
   --text-secondary: royalblue;
   --accent: purple;
-  --link-color: gray;
+  --link-color: #494949;
   --link-color-active: black;
   --size: 1rem;
 }
 
 [data-theme='dark'] {
   --background: black;
-  --navbar-background: cornflowerblue;
-  --text-primary: white;
-  --text-secondary: grey;
+  --navbar-background: gray;
+  --text-primary: floralwhite;
+  --text-secondary: yellow;
   --accent: darkred;
-  --link-color: yellow;
-  --link-color-active: orange;
+  --link-color: white;
+  --link-color-active: yellow;
 }
 
 [size-theme='size-one'] {
@@ -121,16 +121,22 @@ input:checked + .slider {
 a:hover {
   text-decoration: none;
   color: var(--link-color);
+  font-weight: bold;
 }
 
-h2, h3, h4, h5 {
+a {
+  font-weight: bold;
+  font-size: calc(var(--size) + 4px;);
+  color: var(--link-color);
+}
+
+h5 {
   font-size: var(--size);
   color: var(--text-secondary);
 }
 
-p, a {
-  font-size: calc(var(--size) + 2px;);
-  color: var(--link-color);
+p {
+  color: var(--text-primary);
 }
 
 h1 {
@@ -151,4 +157,10 @@ h3 {
 h4 {
   font-size: calc(var(--size) + 8px;);
   color: var(--text-secondary);
+}
+
+// 44x44px for clickable objects
+button {
+    height: 44px;
+    width: 44px;
 }
