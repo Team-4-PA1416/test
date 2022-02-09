@@ -9,6 +9,7 @@
   --link-color: #494949;
   --link-color-active: black;
   --size: 1rem;
+  --image-greyscale: grayscale(0%);
 }
 
 [data-theme='dark'] {
@@ -19,6 +20,17 @@
   --accent: darkred;
   --link-color: white;
   --link-color-active: yellow;
+  --image-greyscale: grayscale(100%);
+}
+
+img {
+    filter: var(--image-greyscale);
+}
+
+@media screen and (min-width: 800px) {
+    img {
+        max-height: 45em;
+    }
 }
 
 [size-theme='size-one'] {

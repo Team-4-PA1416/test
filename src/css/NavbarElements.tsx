@@ -30,6 +30,7 @@ export const DivHolder = styled.div`
     align-items: right;
     flex-direction: column;
     text-align: center;
+    color: var(--text-primary);
 `;
 
 export const NavMenu = styled.div`
