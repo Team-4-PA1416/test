@@ -1,20 +1,31 @@
 const storedTheme = localStorage.getItem("theme");
 const storedSize = localStorage.getItem("size");
-const prefersDark =
+const prefersGrey =
     window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+    window.matchMedia("(prefers-color-scheme: grey)").matches;
 
-const defaultDark =
-    storedTheme === "dark" || (storedTheme === null && prefersDark);
+const prefersBlack =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: black)").matches;
+
+const defaultGrey =
+    storedTheme === "grey" || (storedTheme === null && prefersGrey);
+
+const defaultBlack =
+    storedTheme === "black" || (storedTheme === null && prefersBlack);
 
 const defaultSize =
     storedSize === "two" || (storedSize === null);
 
 
 const Styling = {
-    setDark: function() {
-        localStorage.setItem("theme", "dark");
-        document.documentElement.setAttribute("data-theme", "dark");
+    setGrey: function() {
+        localStorage.setItem("theme", "grey");
+        document.documentElement.setAttribute("data-theme", "grey");
+    },
+    setBlack: function() {
+        localStorage.setItem("theme", "black");
+        document.documentElement.setAttribute("data-theme", "black");
     },
     setLight: function() {
         localStorage.setItem("theme", "light");
@@ -32,8 +43,11 @@ const Styling = {
         if (defaultSize) {
             Styling.setSizeTwo();
         }
-        if (defaultDark) {
-            Styling.setDark();
+        if (defaultBlack) {
+            Styling.setBlack();
+        }
+        if (defaultGrey) {
+            Styling.setGrey();
         }
     }
 };

@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-    NavLink,
-    NavMenu,
-    NavBtn,
-} from '../../css/NavbarElements.tsx';
+import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/button';
 import Navbar from 'react-bootstrap/navbar';
+import Nav from 'react-bootstrap/nav';
 import Styling from '../../javascript/models.js';
 
 const Navbarz = () => {
@@ -14,27 +11,45 @@ const Navbarz = () => {
             <Navbar sticky="top" bg="dark" variant="dark" expand="lg" id="navBar">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <NavMenu>
-                        <NavLink to='/' aria-label="Home link">
+                    <Nav id="link-bar">
+                        <Nav.Item>
+                            <NavLink to='/' aria-label="Home link">
                             Home
-                        </NavLink>
-                        <NavLink to='/about' aria-label="About link">
+                            </NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink to='/about' aria-label="About link">
                             About
-                        </NavLink>
-                        <NavLink to='/contact' aria-label="Contact link">
+                            </NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink to='/contact' aria-label="Contact link">
                             Contact
-                        </NavLink>
-                        <NavBtn className="pull-right">
+                            </NavLink>
+                        </Nav.Item>
+                    </Nav>
+                    <Nav id="button-bar">
+                        <Nav.Item>
                             <Button type="button"
                                 variant="light" onClick={Styling.setSizeOne}>c</Button>
+                        </Nav.Item>
+                        <Nav.Item>
                             <Button type="button"
                                 variant="light" onClick={Styling.setSizeTwo}>C</Button>
+                        </Nav.Item>
+                        <Nav.Item>
                             <Button type="button"
                                 variant="light" onClick={Styling.setLight}>☀️</Button>
+                        </Nav.Item>
+                        <Nav.Item>
                             <Button type="button"
-                                variant="light" onClick={Styling.setDark}>🌒</Button>
-                        </NavBtn>
-                    </NavMenu>
+                                variant="light" onClick={Styling.setGrey}>🌒</Button>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Button type="button"
+                                variant="light" onClick={Styling.setBlack}>🌑</Button>
+                        </Nav.Item>
+                    </Nav>
                 </Navbar.Collapse>
             </Navbar>
         </>

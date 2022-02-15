@@ -5,23 +5,39 @@
   --navbar-background: #63D471;
   --text-primary: black;
   --text-secondary: royalblue;
-  --accent: purple;
+  --accent: #34be45;
   --link-color: #494949;
+  --border-color: #63D471;
   --link-color-active: black;
   --size: 1rem;
   --image-greyscale: grayscale(0%);
 }
 
-[data-theme='dark'] {
-  --background: black;
+[data-theme='grey'] {
+  --background: #2e2e2e;
   --navbar-background: gray;
   --text-primary: floralwhite;
-  --text-secondary: yellow;
+  --text-secondary: floralwhite;
   --accent: darkred;
   --link-color: white;
-  --link-color-active: yellow;
+  --border-color: #949494;
+  --link-color-active: floralwhite;
   --image-greyscale: grayscale(100%);
 }
+
+[data-theme='black'] {
+  --background: black;
+  --navbar-background: black;
+  --text-primary: yellow;
+  --text-secondary: yellow;
+  --accent: #2e2e2e;
+  --link-color: yellow;
+  --active-button: #2e2e2e;
+  --border-color: grey;
+  --link-color-active: orange;
+  --image-greyscale: grayscale(100%);
+}
+
 
 img {
     filter: var(--image-greyscale);
@@ -120,14 +136,58 @@ input:checked + .slider {
 #navBar {
   background-color: var(--navbar-background) !important;
   color: var(--font-color);
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 0.5px;
+  padding: 0px;
+  height: 4em;
+}
+
+#basic-navbar-nav {
+  height: 100%;
+}
+
+#navbar-nav {
+  height: 100%;
 }
 
 #navBar .a {
   color: var(--link-color);
 }
 
-#navBar .active {
-  color: var(--link-color-active);
+.nav-item {
+  display: flex;
+  align-items: center;
+  float: right;
+  width: 100%;
+  justify-content: flex-end;
+  /* Third Nav */
+  /* justify-content: flex-end;
+  width: 100vw; */
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+    background-color: var(--accent);
+    color: var(--link-color-active);
+  }
+}
+
+#link-bar {
+  height: 100%;
+}
+
+#button-bar {
+  margin-left: auto;
 }
 
 a:hover {
