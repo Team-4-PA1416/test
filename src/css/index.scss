@@ -140,11 +140,6 @@ input:checked + .slider {
   border-color: var(--border-color);
   border-width: 0.5px;
   padding: 0px;
-  height: 4em;
-}
-
-#basic-navbar-nav {
-  height: 100%;
 }
 
 #navbar-nav {
@@ -153,6 +148,16 @@ input:checked + .slider {
 
 #navBar .a {
   color: var(--link-color);
+}
+
+.collapse {
+  &:not(.show) {
+    height: 4em;
+  }
+  #button-bar {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .nav-item {
@@ -164,9 +169,6 @@ input:checked + .slider {
   /* Third Nav */
   /* justify-content: flex-end;
   width: 100vw; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .nav-item a {
