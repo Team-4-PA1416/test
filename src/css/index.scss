@@ -163,12 +163,6 @@ input:checked + .slider {
 .nav-item {
   display: flex;
   align-items: center;
-  float: right;
-  width: 100%;
-  justify-content: flex-end;
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
 }
 
 .nav-item a {
@@ -186,6 +180,7 @@ input:checked + .slider {
 
 #link-bar {
   height: 100%;
+  display: flex;
 }
 
 #button-bar {
