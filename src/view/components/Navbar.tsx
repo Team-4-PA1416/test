@@ -31,23 +31,29 @@ const Navbarz = () => {
                     <Nav id="button-bar">
                         <Nav.Item>
                             <Button type="button"
-                                variant="light" onClick={Styling.setSizeOne}>c</Button>
+                                variant="light" onClick={Styling.setSizeOne}>A</Button>
                         </Nav.Item>
                         <Nav.Item>
                             <Button type="button"
-                                variant="light" onClick={Styling.setSizeTwo}>C</Button>
+                                variant="light" onClick={Styling.setSizeTwo}>A</Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Button type="button"
-                                variant="light" onClick={Styling.setLight}>☀️</Button>
+                            <Button type="button" id="button1" value="white/black color scheme"
+                                variant="light" onClick={Styling.setLight}>
+                                <div className="dot">C</div>
+                            </Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Button type="button"
-                                variant="light" onClick={Styling.setGrey}>🌒</Button>
+                            <Button type="button" id="button2" value="greyscale color scheme"
+                                variant="light" onClick={Styling.setGrey}>
+                                <div className="dot">C</div>
+                            </Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Button type="button"
-                                variant="light" onClick={Styling.setBlack}>🌑</Button>
+                            <Button type="button" id="button3" value="black/yellow color scheme"
+                                variant="light" onClick={Styling.setBlack}>
+                                <div className="dot">C</div>
+                            </Button>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

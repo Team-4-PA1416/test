@@ -18,7 +18,7 @@
   --navbar-background: gray;
   --text-primary: floralwhite;
   --text-secondary: floralwhite;
-  --accent: darkred;
+  --accent: #5d5d5d;
   --link-color: white;
   --border-color: #949494;
   --link-color-active: floralwhite;
@@ -71,6 +71,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#button2 {
+    background-color: #2e2e2e;
+    border-color: #535353;
+    .dot {
+      color: floralwhite;
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: normal;
+    }
+}
+
+#button3 {
+    background-color: black;
+    border-color: #2e2e2e;
+    .dot {
+      color: yellow;
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: normal;
+    }
+}
+
+.dot {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: normal;
 }
 
 .toggle-theme-wrapper {
