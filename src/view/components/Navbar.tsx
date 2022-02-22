@@ -30,11 +30,16 @@ const Navbarz = () => {
                     </Nav>
                     <Nav id="button-bar">
                         <Nav.Item>
-                            <Button type="button"
-                                variant="light" onClick={Styling.setSizeOne}>A</Button>
+                            <Button type="button" className="buttonFont1"
+                                variant="light" onClick={Styling.setSizeOne}>
+                                A</Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Button type="button"
+                            <Button type="button" className="buttonFont2"
+                                variant="light" onClick={Styling.setSizeThree}>A</Button>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Button type="button" className="buttonFont3"
                                 variant="light" onClick={Styling.setSizeTwo}>A</Button>
                         </Nav.Item>
                         <Nav.Item>

@@ -51,10 +51,17 @@ img {
 
 [size-theme='size-one'] {
     --size: 1rem;
+    --active1: blue;
 }
 
 [size-theme='size-two'] {
-    --size: 2rem;
+    --size: 1.5rem;
+    --active2: blue;
+}
+
+[size-theme='size-three'] {
+    --size: 1.2rem;
+    --active3: blue;
 }
 
 body {
@@ -71,6 +78,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.buttonFont1 {
+  font-size: 1rem;
+}
+
+.buttonFont2 {
+  font-size: 1.2rem;
+}
+
+.buttonFont3 {
+  font-size: 1.5rem;
+  padding: 0px;
 }
 
 #button2 {

@@ -14,11 +14,17 @@ const defaultGrey =
 const defaultBlack =
     storedTheme === "black" || (storedTheme === null && prefersBlack);
 
-const defaultSize =
+const defaultSizeTwo =
     storedSize === "two" || (storedSize === null);
+
+const defaultSizeThree =
+    storedSize === "three" || (storedSize === null);
 
 
 const Styling = {
+    setActive: function(value) {
+        console.log(value);
+    },
     setGrey: function() {
         localStorage.setItem("theme", "grey");
         document.documentElement.setAttribute("data-theme", "grey");
@@ -39,9 +45,16 @@ const Styling = {
         localStorage.setItem("size", "two");
         document.documentElement.setAttribute("size-theme", "size-two");
     },
+    setSizeThree: function() {
+        localStorage.setItem("size", "three");
+        document.documentElement.setAttribute("size-theme", "size-three");
+    },
     setDefault: function() {
-        if (defaultSize) {
+        if (defaultSizeTwo) {
             Styling.setSizeTwo();
+        }
+        if (defaultSizeThree) {
+            Styling.setSizeThree();
         }
         if (defaultBlack) {
             Styling.setBlack();
